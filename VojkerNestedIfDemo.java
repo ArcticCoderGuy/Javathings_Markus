@@ -47,8 +47,13 @@ public static class VojkerNestedIfDemo {
 
 
                     }
+                } else {
+                    system.outprintlm("No-go: Stop-loss too cloe ");
                 }
 
+
+            } else {
+                System.out.println("NO-GO: Invalid signal values ");
             }
 
 
