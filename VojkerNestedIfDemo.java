@@ -1,5 +1,5 @@
-public static class VojkerNestedIfDemo {
-    public static class main(String [] args ) {
+public class VojkerNestedIfDemo {
+    public static void main(String [] args ) {
 
     // "Signal" example-data is coming in
 
@@ -16,13 +16,13 @@ public static class VojkerNestedIfDemo {
     if( entry > 0 && SL > 0 && TP > 0) {
         System.out.println("Signal format Ok !");
 
-    // 2) Market gate for session: Can we trade now ?
+     // 2) Market gate for session: Can we trade now ?
         if (marketOpen) {
             System.out.println("Market is open !");
 
-    // 3) Risk gate: SL/TP distance ja RR
+      // 3) Risk gate: SL/TP distance ja RR
             double SLlossdistance = Math.abs(entry - stoplossdistance);
-            double TPprofitdistance = math.abs(TP - entry)
+            double TPprofitdistance = math.abs(TP - entry);
 
             if(SLdistance >= 0.0010) {
                 system.out.println("Stop-loss distance OK ! ");
@@ -39,7 +39,7 @@ public static class VojkerNestedIfDemo {
                         System.out.println("GO: Trade Approved !");
 
                         else {
-                            System.out.println("No-Go: Cooldown active !!");
+                            System.out.println("No-Go:cooldown active !!");
                             
                         }
                         
@@ -48,7 +48,7 @@ public static class VojkerNestedIfDemo {
 
                     }
                 } else {
-                    system.outprintlm("No-go: Stop-loss too cloe ");
+                    system.outprintlm("No-go: Stop-loss too close ");
                 }
 
 
