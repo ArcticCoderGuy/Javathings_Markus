@@ -7,7 +7,7 @@ public class VojkerNestedIfDemo
                     double entry = 1.1000;
                     double SL = 1.0985;
                     double TP = 1.1035;
-
+                    double stoplossdistance = 5;
                     boolean marketOpen = true; // Simulate session is open (NY,London or Tokyo)
                     boolean cooldownActive = true // Is there a Red-flag news period
         // 1) Gate is validated: Is the trade sensible  
@@ -48,6 +48,8 @@ public class VojkerNestedIfDemo
         } else {
             System.out.println("NO-GO: Invalid signal values ");
         }
+    }
+
     }
 }
 
