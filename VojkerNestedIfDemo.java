@@ -1,45 +1,49 @@
-public static void main(String [] args ) {// "Signal" example-data is coming in
+public class VojkerNestedIfDemo 
+{
 
-double entry = 1.1000;
-double SL = 1.0985;
-double TP = 1.1035;
+                public static void main(String [] args ) 
+    {   // "Signal" example-data is coming in
 
-boolean marketOpen = true; // Simulate session is opnen (NY,London or Tokyo)
-boolean cooldownActice = true // Is there a Red-flag news period
-// 1) Gate is validated: Is the trade sensible  
+                    double entry = 1.1000;
+                    double SL = 1.0985;
+                    double TP = 1.1035;
 
-if( entry > 0 && SL > 0 && TP > 0) {
-    System.out.println("Signal format Ok !");
+                    boolean marketOpen = true; // Simulate session is open (NY,London or Tokyo)
+                    boolean cooldownActive = true // Is there a Red-flag news period
+        // 1) Gate is validated: Is the trade sensible  
 
- // 2) Market gate for session: Can we trade now ?
-    if (marketOpen) {
-        System.out.println("Market is open !");
+                    if( entry > 0 && SL > 0 && TP > 0) {
+                    System.out.println("Signal format Ok !");
 
-  // 3) Risk gate: SL/TP distance ja RR
-        double SLlossdistance = Math.abs(entry - stoplossdistance);
-        double TPprofitdistance = math.abs(TP - entry);
+            // 2) Market gate for session: Can we trade now ?
+                        if (marketOpen) {
+                         System.out.println("Market is open !");
 
-        if(SLdistance >= 0.0010) {
-            system.out.println("Stop-loss distance OK ! ");
+                // 3) Risk gate: SL/TP distance ja RR
+                            double SLlossdistance = Math.abs(entry - stoplossdistance);
+                            double TPprofitdistance = math.abs(TP - entry);
 
-            // Nested If: risk reward (rr) gate
-            double rr = TPdistance / SLdistance 
+                            if(SLdistance >= 0.0010) {
+                            system.out.println("Stop-loss distance OK ! ");
 
-            if (rr >= 1.2) {
-                System.out.println("rr OK (" + rr + "). ");
-                // Nested if: cooldown gate
-                if(!cooldownActice) {
-                    System.out.println("GO: Trade Approved !");
+                          // Nested If: risk reward (rr) gate
+                                double rr = TPdistance / SLdistance 
 
-                    else {
-                        System.out.println("No-Go:cooldown active !!");
+                                if (rr >= 1.2) {
+                                System.out.println("rr OK (" + rr + "). ");
+                            // Nested if: cooldown gate
+                                if(!cooldownActive) {
+                                    System.out.println("GO: Trade Approved !");
+
+                                    else {
+                                        System.out.println("No-Go:cooldown active !!");
                         
                     }
                     
                     
                 }
             } else {
-                system.outprintlm("No-go: Stop-loss too close ");
+                system.out.println("No-go: Stop-loss too close ");
             }
         } else {
             System.out.println("NO-GO: Invalid signal values ");
