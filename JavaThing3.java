@@ -6,7 +6,9 @@ public class JavaThing3
         String name;
         System.out.print("Enter your name: ");
         name = s.nextLine();
-        System.out.println("Welcome Mr.|Mss. " + name);
+        System.out.println("Welcome, "+ name + "!");
+
+        s.close();
 
     }
 }
