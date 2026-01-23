@@ -8,7 +8,7 @@ public class Main {
     // ==============================
     // These variables represent the "contract":
     // the system assumes this data exists and is correctly typed.
-    int age = 20;
+    int age = 0;
     boolean isCitizen = true;
     boolean isRegistered = true;
     boolean hasID = true;
