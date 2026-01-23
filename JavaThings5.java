@@ -3,7 +3,7 @@
 public class JavaThings5
 {
 
-    public static vooid main (String[] args ) {
+    public static void main (String[] args ) {
 
         int securityLevel = 4;
         int accessCode = 1234;
@@ -16,7 +16,8 @@ public class JavaThings5
 
             // Second check: is security level sufficient ?
 
-            if(securityLevel >= 3) {
+            if(securityLevel >= 3) 
+                {
                 System.out.println("Security level sufficient");
 
                 // Third check: is access code correct ?
