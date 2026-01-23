@@ -33,10 +33,10 @@ public class DeMorgan2
         }
         System.out.println(text);
 
-        
+
 
 
      }
-    )
+    
 
 }
